@@ -15,6 +15,16 @@ router.get("/", function(req, res) {
   });
 });
 
+router.get("/api/burger", function(req, res) {
+  burger.selectAll(function(data) {
+    var hbsObject = {
+      burgers: data
+    };
+    console.log(hbsObject);
+    res.json(hbsObject)
+  });
+});
+
 router.post("/api/burgers", function(req, res) {
   burger.insertOne([
     "burger_name", "devoured"
