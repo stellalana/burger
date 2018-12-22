@@ -1,4 +1,4 @@
-var connection = require("/connection.js")
+var connection = require("./connection.js")
 
 // Helper function for SQL syntax.
 // Loops through and creates an array of question marks - ["?", "?", "?"] - and turns it into a string.
